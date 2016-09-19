@@ -24,47 +24,28 @@
 //Header
 require 'header.php';
 ?>
-        <div class="row">
-            <h4>Read a term</h4>
-        </div>
-
-        <div class="form-horizontal" >
-          <div class="control-group">
-            <label class="control-label">Term</label>
-            <div class="controls">
-                <label class="checkbox">
-                <?php echo $row['name'];?>
-                </label>
-            </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label">Definition</label>
-            <div class="controls">
-                <label class="checkbox">
-                    <?php echo $row['definition'];?>
-                </label>
-            </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label">Create</label>
-            <div class="controls">
-                <label class="checkbox">
-                    <?php echo $row['create_time'];?>
-                </label>
-            </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label">Update</label>
-            <div class="controls">
-                <label class="checkbox">
-                    <?php echo $row['update_time'];?>
-                </label>
-            </div>
-        </div>
-        <div class="form-actions">
-          <a class="btn" href="index.php">Back</a>
-        </div>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading panel-heading--bold">
+      <?= $row['name'] ?>
     </div>
+    <div class="panel-body">
+        <?= $row['definition'] ?>
+      <div class="panel-body" style="text-align: center">
+        <div class="row vertical-centered">
+          <div class="col-xs-12 col-sm-6">
+            <p>Created: <?= $row['create_time'] ?></p>
+            <p>Updated: <?= $row['update_time'] ?></p>
+          </div>
+          <div class="col-xs-12 col-sm-6 btn-centered">
+            <a class="btn btn-info" href="index.php">Back</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div> <!-- /container -->
 <?php
 //Footer
