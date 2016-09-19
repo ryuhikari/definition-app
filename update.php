@@ -23,8 +23,6 @@
         // keep track post values
         $name = $_POST['name'];
         $definition = $_POST['definition'];
-        $create_time = $_POST['create_time'];
-        $update_time = $_POST['update_time'];
 
         // validate input
         $valid = true;
@@ -65,57 +63,63 @@
 //Header
 require 'header.php';
 ?>
-    <div class="row">
-        <h4>Update a term</h4>
+<div class="row">
+  <div class="col-sm-12">
+    <h4>Update a term</h4>
+  </div>
+</div>
+
+<form class="form-horizontal" action="update.php?id=<?php echo $id?>" method="post">
+
+    <div class="form-group <?php echo !empty($nameError)?'error':'';?>">
+        <label class="control-label col-sm-2" for="name">Term</label>
+        <div class="col-sm-10">
+            <input class="form-control" name="name" id="name" type="text" placeholder="Name" value="<?php echo !empty($name)?$name:'';?>">
+            <?php if (!empty($nameError)): ?>
+                <span class="help-inline"><?php echo $nameError;?></span>
+            <?php endif; ?>
+        </div>
     </div>
 
-    <form class="form-horizontal" action="update.php?id=<?php echo $id?>" method="post">
-
-        <div class="control-group <?php echo !empty($nameError)?'error':'';?>">
-            <label class="control-label">Term</label>
-            <div class="controls">
-                <input name="name" type="text"  placeholder="Name" value="<?php echo !empty($name)?$name:'';?>">
-                <?php if (!empty($nameError)): ?>
-                    <span class="help-inline"><?php echo $nameError;?></span>
-                <?php endif; ?>
-            </div>
+    <div class="form-group <?php echo !empty($definitionError)?'error':'';?>">
+        <label class="control-label col-sm-2" for="definition">Definition</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" name="definition" id="definition" placeholder="Definition" rows="5"><?php echo !empty($definition)?$definition:'';?></textarea>
+            <?php if (!empty($definitionError)): ?>
+                <span class="help-inline"><?php echo $definitionError;?></span>
+            <?php endif; ?>
         </div>
+    </div>
 
-        <div class="control-group <?php echo !empty($definitionError)?'error':'';?>">
-            <label class="control-label">Definition</label>
-            <div class="controls">
-                <textarea name="definition" placeholder="Definition" rows="5"><?php echo !empty($definition)?$definition:'';?></textarea>
-                <?php if (!empty($definitionError)): ?>
-                    <span class="help-inline"><?php echo $definitionError;?></span>
-                <?php endif; ?>
-            </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="creation_time">Create</label>
+        <div class="col-sm-10">
+            <input disabled class="form-control" name="creation_time" id="creation-time" type="text"  placeholder="Create" value="<?php echo !empty($create_time)?$create_time:'';?>">
+            <?php if (!empty($create_timeError)): ?>
+                <span class="help-inline"><?php echo $create_timeError;?></span>
+            <?php endif; ?>
         </div>
+    </div>
 
-        <div class="control-group">
-            <label class="control-label">Create</label>
-            <div class="controls">
-                <input disabled name="creation_time" type="text"  placeholder="Create" value="<?php echo !empty($create_time)?$create_time:'';?>">
-                <?php if (!empty($create_timeError)): ?>
-                    <span class="help-inline"><?php echo $create_timeError;?></span>
-                <?php endif; ?>
-            </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="update_time">Update</label>
+        <div class="col-sm-10">
+            <input disabled class="form-control" name="update_time" type="text"  placeholder="Update" value="<?php echo !empty($update_time)?$update_time:'';?>">
+            <?php if (!empty($update_timeError)): ?>
+                <span class="help-inline"><?php echo $update_timeError;?></span>
+            <?php endif; ?>
         </div>
+    </div>
 
-        <div class="control-group">
-            <label class="control-label">Update</label>
-            <div class="controls">
-                <input disabled name="update_time" type="text"  placeholder="Update" value="<?php echo !empty($update_time)?$update_time:'';?>">
-                <?php if (!empty($update_timeError)): ?>
-                    <span class="help-inline"><?php echo $update_timeError;?></span>
-                <?php endif; ?>
-            </div>
-        </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10 ">
+          <button type="submit" class="btn btn-success">Update</button>
+          <a class="btn btn-info" href="index.php">Back</a>
+      </div>
+    </div>
 
-        <div class="form-actions">
-            <button type="submit" class="btn btn-success">Update</button>
-            <a class="btn" href="index.php">Back</a>
-        </div>
-    </form>
+</form>
+
 </div> <!-- /container -->
 <?php
 //Footer
