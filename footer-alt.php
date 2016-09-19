@@ -1,9 +1,8 @@
   <div class="blank-space"></div>
 
-  <footer class="container-fluid">
-    <div class="row text-center">
+  <footer class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
       <h3>&copy; <?php echo date("Y"); ?> Applied Web Architecture - Jönköping University</h3>
-      <h5>Definitons taken from <a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">Wikipedia</a></h5>
     </div>
   </footer>
 
