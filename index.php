@@ -37,9 +37,9 @@ if ( !empty($_POST)) {
                   <p>Updated: <?= $row['update_time'] ?></p>
                 </div>
                 <div class="col-xs-12 col-sm-6 btn-centered">
-                  <a class="btn btn-info" href="read.php?id='<?= $row['name'] ?>'">Read</a>
-                  <a class="btn btn-success" href="update.php?id='<?= $row['name'] ?>'">Update</a>
-                  <a class="btn btn-danger" href="delete.php?id='<?= $row['name'] ?>'">Delete</a>
+                  <a class="btn btn-info" href="read.php?id='<?= $row['name'] ?>">Read</a>
+                  <a class="btn btn-success" href="update.php?id=<?= $row['name'] ?>">Update</a>
+                  <a class="btn btn-danger" href="delete.php?id=<?= $row['name'] ?>">Delete</a>
                 </div>
               </div>
             </div>
@@ -52,7 +52,10 @@ if ( !empty($_POST)) {
       </div>
       <?php
     } else {
-        echo "0 results";
+        echo "<p>0 results</p>";
+        ?>
+        <a class="btn btn-info" href="index.php">Back</a>
+        <?php
     }
 
 } else {

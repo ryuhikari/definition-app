@@ -20,7 +20,7 @@
             $valid = false;
         }
         if (empty($definition)) {
-            $nameError = 'Please enter Definition';
+            $definitionError = 'Please enter Definition';
             $valid = false;
         }
 
@@ -57,7 +57,7 @@ require 'header.php';
     <div class="col-sm-10">
       <input class="form-control" name="name" id="name" type="text"  placeholder="Name" value="<?php echo !empty($name)?$name:'';?>">
       <?php if (!empty($nameError)): ?>
-        <span class="help-inline"><?php echo $nameError;?></span>
+        <div class="alert alert-danger"><?php echo $nameError;?></div>
       <?php endif; ?>
     </div>
   </div>
@@ -67,7 +67,7 @@ require 'header.php';
     <div class="col-sm-10">
       <textarea class="form-control" name="definition" id="definition" type="text"  placeholder="Definition" rows='5'><?php echo !empty($definition)?$definition:'';?></textarea>
       <?php if (!empty($definitionError)): ?>
-        <span class="help-inline"><?php echo $definitionError;?></span>
+        <div class="alert alert-danger"><?php echo $definitionError;?></div>
       <?php endif; ?>
     </div>
   </div>

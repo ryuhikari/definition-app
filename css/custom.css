@@ -3,32 +3,17 @@ html {
   min-height: 100%;
 }
 
+body {
+  padding-top: 70px;
+}
+
 h4 {
   font-weight: 700;
 }
 
-.jumbotron--less-b-margin {
-  padding-bottom: 30px;
-}
-
-a.app-name-logo {
-    color: #000000;
-    text-decoration: none;
-}
-
-a.app.name-logo:hover
-{
-     color:#000000;
-     text-decoration:none;
-     cursor:pointer;
-}
-
-.create-and-search-section {
-  margin: 0px 0;
-}
-
-.create-and-search-section .form-group {
-  float: right;
+.navbar-btn a {
+  text-decoration: none;
+  color: #FFF;
 }
 
 .panel-heading--bold {
@@ -50,7 +35,7 @@ a.app.name-logo:hover
 .blank-space {
   content: "";
   opacity: 0;
-  height: 52px;
+  height: 79px;
 }
 
 footer {

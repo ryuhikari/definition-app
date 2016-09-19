@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Definition App</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/x-icon" href="books-icon.ico">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
+  <title>Definition App</title>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="jumbotron jumbotron--less-b-margin text-center">
-      <h1><a class="app-name-logo" href="/">Definition App</a></h1>
-      <h5>Definitons taken from <a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">Wikipedia</a></h5>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
 
-      <section class="row create-and-search-section">
-          <div class="col-xs-12 col-sm-3">
-            <a href="create.php" class="btn btn-success">Add new term</a>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Definition App </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><button class="btn btn-success navbar-btn"><a href="create.php">Add new term</a></button></li>
+        </ul>
+        <form class="navbar-form navbar-right" role="search" action="index.php" method="post">
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Search a term">
           </div>
-          <div class="col-xs-12 col-sm-9">
-            <!-- Search -->
-            <form class="form-inline" action="index.php" method="post">
-              <div class="form-group">
-                <input name="name" type="text" class="form-control" placeholder="Search a term">
-                <button type="submit" class="btn btn-default">Search</button>
-              </div>
-            </form>
-            <!-- End Searh -->
-          </div>
-      </section>
+          <button type="submit" class="btn btn-default">Search</button>
+        </form>
+      </div>
     </div>
+  </nav>
 
-    <div class="container">
+  <div class="container">
