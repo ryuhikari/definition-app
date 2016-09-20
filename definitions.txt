@@ -1,0 +1,8 @@
+concatenation = put two strings tigether. even files
+
+dynamically typed = one feature of php. you dont have to declare the type of a variable. the data type is resolved.
+
+associative array = key and value, not by index.
+
+argument = the info that is passed to a function. receive arguments
+

@@ -34,8 +34,9 @@
         <a class="navbar-brand" href="/">Definition App </a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
+        <button type="button" class="btn btn-success navbar-btn navbar-right" onclick="window.location.href='create.php'">Add new term</button>
         <ul class="nav navbar-nav">
-          <li><button class="btn btn-success navbar-btn" onclick="window.location.href='create.php'">Add new term</button></li>
+          <li><a href="https://github.com/ryuhikari/definition-app">GitHub project</a></li>
         </ul>
         <form class="navbar-form navbar-right" role="search" action="index.php" method="post">
           <div class="form-group">
