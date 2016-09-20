@@ -35,7 +35,7 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><button class="btn btn-success navbar-btn"><a href="create.php">Add new term</a></button></li>
+          <li><button class="btn btn-success navbar-btn" onclick="window.location.href='create.php'">Add new term</button></li>
         </ul>
         <form class="navbar-form navbar-right" role="search" action="index.php" method="post">
           <div class="form-group">
