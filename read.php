@@ -12,7 +12,7 @@
     if ( null==$id ) {
         header("Location: index.php");
     } else {
-        $sql = "SELECT * FROM Term";
+        $sql = "SELECT * FROM Term WHERE name = '$id'";
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
     }
